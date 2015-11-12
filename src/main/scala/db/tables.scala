@@ -8,13 +8,6 @@ import slick.driver.H2Driver
  * Created by akhil on 11/10/15.
  */
 
-
-object Tables extends {
-  val profile = slick.driver.H2Driver
-  val jodaSupport = H2JodaSupport
-} with Tables
-
-
 trait Tables {
   val profile: slick.driver.JdbcProfile
   val jodaSupport: GenericJodaSupport
@@ -49,5 +42,5 @@ trait Tables {
 
   val comments = TableQuery[Comments]
 
-  def schema = articles.schema ++ comments.schema
+
 }
